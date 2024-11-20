@@ -37,12 +37,12 @@ Siga os passos abaixo para rodar o projeto em sua máquina:
 
 2. **Instale as dependências**
   ```bash
-  yarn install
+    yarn install
   ```
 
 3. **Inicie o servidor de desenvolvimento**
   ```bash
-   yarn start
+     yarn start
    ```
 
 4. **Acesse o aplicativo**
