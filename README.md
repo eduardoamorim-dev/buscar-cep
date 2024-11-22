@@ -1,21 +1,21 @@
-# 🔍 Busca de CEP
+# 🔍 Busca de CNPJ
 
-Um aplicativo simples, desenvolvido com **React** e **Ant Design**, que permite consultar informações detalhadas sobre um CEP usando a API da [BrasilAPI](https://brasilapi.com.br/).
+Um aplicativo simples, desenvolvido com **PHP** e **cURL**, que permite consultar informações detalhadas sobre um CNPJ usando a API da [BrasilAPI](https://brasilapi.com.br/).
 
 ---
 
 ## 📜 Sobre o Projeto
 
-Este projeto foi criado para fornecer uma interface elegante e funcional para busca de CEPs, oferecendo informações como rua, bairro, cidade e estado de forma prática e organizada. Ideal para praticar habilidades com React e integrar APIs externas.
+Este projeto foi criado para fornecer uma interface simples e funcional para consulta de CNPJs, oferecendo informações como nome fantasia, razão social, município e atividade econômica de forma organizada. Ideal para praticar integração com APIs externas e manipulação de dados em PHP.
 
 ---
 
 ### 🖼️ Layout do Projeto
 
-O design utiliza o **Ant Design** para criar um visual moderno e harmonioso:  
+O design utiliza o **Bootstrap** para criar um visual moderno e funcional:  
 - **Centralização**: Todos os elementos estão centralizados para melhor experiência do usuário.  
 - **Estilo Responsivo**: Adapta-se a diferentes tamanhos de tela.  
-- **UX Melhorada**: Campos de entrada compactos, botões intuitivos e mensagens de erro claras.  
+- **UX Melhorada**: Campos de entrada compactos, botões intuitivos e mensagens de erro claras.
 
 ---
 
@@ -24,70 +24,68 @@ O design utiliza o **Ant Design** para criar um visual moderno e harmonioso:
 Siga os passos abaixo para rodar o projeto em sua máquina:
 
 ### Pré-requisitos
-- Node.js instalado (versão 16+ recomendada)
-- Gerenciador de pacotes: `yarn`
+- Servidor local (como **XAMPP** ou **MAMP**) ou servidor PHP.
+- **cURL** habilitado no PHP.
 
 ### Passos para execução
 
 1. **Clone o repositório**
 ```bash
-  git clone https://github.com/seu-usuario/busca-cep.git
-  cd busca-cep
+  git clone https://github.com/seu-usuario/busca-cnpj.git
+  cd busca-cnpj
+
 ```
 
-2. **Instale as dependências**
-  ```bash
-    yarn install
-  ```
+2. **Suba o servidor local**
 
-3. **Inicie o servidor de desenvolvimento**
-  ```bash
-     yarn start
-   ```
+    - Se estiver usando XAMPP ou MAMP, basta colocar o diretório busca-cnpj na pasta de htdocs ou www do seu servidor local.
 
-4. **Acesse o aplicativo**
-  Abra seu navegador e acesse: `http://localhost:3000`
+3. **Acesse o aplicativo**
+
+    - Abra seu navegador e acesse: `http://localhost/busca-cnpj/index.php`
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
-**React:** Biblioteca JavaScript para criação de interfaces de usuário.
+**PHP:** Linguagem de programação server-side para processamento de dados e requisições HTTP.
 
-**Ant Design:** Framework de componentes UI para React.
+**cURL:** Biblioteca do PHP para realizar requisições HTTP e consumir APIs.
 
-**Axios:** Cliente HTTP para consumo de APIs.
+**Bootstrap:** Framework de CSS para criação de layouts responsivos e modernos.
 
-**BrasilAPI:** API pública para busca de CEPs e outros serviços.
+**BrasilAPI:** API pública para consulta de informações de CNPJ e outros serviços.
    
 ---
 
 ## 📖 Funcionalidades
 
-- Busca de informações detalhadas de CEPs.
-- Validação básica de entradas com mensagem de erro.
-- Resposta amigável ao usuário quando o CEP não é encontrado.
+  - Consulta de informações detalhadas sobre CNPJs.
+  - Validação básica de entradas com mensagens de erro.
+  - Exibição clara de informações como nome fantasia, razão social, município, e CNAE.
 
 ---
 
 ## 🌐 API Utilizada
 
-A aplicação consome a API pública da BrasilAPI, especificamente o endpoint de CEPs:
+A aplicação consome a API pública da BrasilAPI, especificamente o endpoint de CNPJ:
 
 **Endpoint:**
-https://brasilapi.com.br/api/cep/v2/{cep}
+https://brasilapi.com.br/api/cnpj/v1/{cnpj}
 
 **Exemplo de Resposta:**
 
 ```
   {
-    "cep": "01001-000",
-    "state": "SP",
-    "city": "São Paulo",
-    "neighborhood": "Sé",
-    "street": "Praça da Sé"
+    "cnpj": "00000000000191",
+    "nome_fantasia": "Nome Fantasia Exemplo",
+    "razao_social": "Razão Social Exemplo",
+    "uf": "SP",
+    "municipio": "São Paulo",
+    "cnae_fiscal_descricao": "Comércio Varejista"
   }
 ```
+
 
 ---
 
